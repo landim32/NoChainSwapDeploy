@@ -1,16 +1,10 @@
-# Stage 1: Build the React Application
 #FROM node:18
 FROM nginx:alpine 
 
-WORKDIR /app
+WORKDIR /var/www
 
-COPY . .
-
-# Stage 2: Setup the Nginx Server to serve the React Application
-
-COPY CodeDevClub /var/www/codedevclub
-COPY BEHR /var/www/behr
-COPY WB3 /var/www/wb3
+COPY nochainswap /var/www/nochainswap
+COPY big-whale /var/www/big-whale
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
