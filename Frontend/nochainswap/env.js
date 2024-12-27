@@ -3,7 +3,7 @@ window.env = {
   "NODE_PATH": "./src",
   "PUBLIC_URL": "/",
   "SITE_BASENAME": "/",
-  "API_BASE_URL": "https://localhost:44374",
+  "API_BASE_URL": "https://nochainswap.org:8080",
   "USDT_CONTRACT": "0x7ef95a0FEE0Dd31b22626fA2e10Ee6A223F8a684",
   "PORT": "443",
   "USE_STACKS_CHAIN": true,
