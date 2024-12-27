@@ -3,6 +3,8 @@ FROM nginx:alpine
 
 WORKDIR /var/www
 
+COPY nochainswap.org.chained.crt /etc/nginx/conf.d
+COPY nochainswap.org.key /etc/nginx/conf.d
 COPY nochainswap /var/www/nochainswap
 COPY big-whale /var/www/big-whale
 
