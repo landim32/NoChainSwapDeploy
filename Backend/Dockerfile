@@ -21,7 +21,5 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 COPY Build /app/publish
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+WORKDIR /app/publish
 ENTRYPOINT ["dotnet", "NoChainSwap.API.dll"]
