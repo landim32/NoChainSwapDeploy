@@ -22,4 +22,4 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 COPY Build /app/publish
 
 WORKDIR /app/publish
-ENTRYPOINT ["dotnet", "BTCSTXSwap.BackgroundService.dll"]
+ENTRYPOINT ["dotnet", "BTCSTXSwap.BackgroundService.exe"]
