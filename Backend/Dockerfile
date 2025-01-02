@@ -18,21 +18,6 @@ RUN make
 RUN make install
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-#WORKDIR /src
-#COPY ["NoChainSwap.API/nochainswap.org.pfx", "NoChainSwap.API/"]
-#COPY ["NoChainSwap.API/NoChainSwap.API.csproj", "NoChainSwap.API/"]
-#COPY ["NoChainSwap.Application/NoChainSwap.Application.csproj", "NoChainSwap.Application/"]
-#COPY ["NoChainSwap.Domain/NoChainSwap.Domain.csproj", "NoChainSwap.Domain/"]
-#COPY ["Core.Domain/Core.Domain.csproj", "Core.Domain/"]
-#COPY ["NoChainSwap.DTO/NoChainSwap.DTO.csproj", "NoChainSwap.DTO/"]
-#COPY ["DB.Infra/DB.Infra.csproj", "DB.Infra/"]
-#RUN dotnet restore "NoChainSwap.API/NoChainSwap.API.csproj"
-#COPY . .
-#WORKDIR "/src/NoChainSwap.API"
-#RUN dotnet build "NoChainSwap.API.csproj" -c Release -o /app/build
-
-#FROM build AS publish
-#RUN dotnet publish "NoChainSwap.API.csproj" -c Release -o /app/publish
 
 COPY Build /app/publish
 
